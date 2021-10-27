@@ -1,0 +1,29 @@
+image: alpine:3.14.2
+
+stages:
+ - build
+ - test
+
+build_a:
+ stage: build
+ script:
+  - echo "This job builds something"
+
+build_b:
+ stage: build
+ script:
+  - echo "This job builds something else."
+  - echo "It will start at around the same time as test_a"
+
+test_a:
+  stage: test
+    script:
+      - echo "This job tests something."
+      - echo "It will only run when all jobs in the build stage are complete."
+
+test_b:
+  stage: test
+    script:
+	- echo "This job tests something else."
+	- echo "It will only run when all jobs in the build stage are complete."
+	- echo "It will start at about the same time as test_a."
