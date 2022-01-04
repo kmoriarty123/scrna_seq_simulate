@@ -1,0 +1,5 @@
+python cli.py --frag_file_name C:/Users/morika/Desktop/scRNA_project/data/test_terminal_fragments.txt \
+--num_reads 80 \
+--read_len 10 \
+--num_seq_cyc 5 \
+--output_file_name C:/Users/morika/Desktop/scRNA_project/output/reads.csv
